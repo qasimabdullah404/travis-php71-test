@@ -1,6 +1,6 @@
 os: linux
 dist: bionic
-language: php
+language: xenial
 
 php:
  - 7.1
