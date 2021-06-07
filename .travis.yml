@@ -5,8 +5,21 @@ language: php
 php:
  - 7.1
 
+addons:
+  apt:
+    sources:
+      - sourceline: ppa:ondrej/php
+    packages:
+      - graphviz
+      - php7.1-fpm
+      - php7.1-mbstring
+      - php7.1-curl
+      - php7.1-pgsql
+      - php7.1-bcmath
+      - php7.1-intl
+      - php7.1-xml
+
 before_install:
   - sudo apt-get update
-  - sudo apt-get -yq --no-install-suggests --no-install-recommends install graphviz php7.1-fpm php7.1-mbstring php7.1-curl php7.1-pgsql php7.1-bcmath php7.1-intl php7.1-xml
 script:
   - php -v
